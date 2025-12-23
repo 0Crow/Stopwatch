@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5e6b8;  
+    min-height: 100vh;
+    background-image: url("./src/timer.jpg");
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.stopwatch-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 360px;
+}
+
+.stopwatch-wrapper {
+    background-color: #0f0f0ff2;
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    width: 350px;
+    border-radius: 20px;
+    border: 1px solid #ad971a; 
+    box-shadow:
+        0 15px 40px #000000e6,
+        0 0 15px #ad971a66;
+}
+
+#timer {
+    font-size: 2.8rem;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #ad971a; 
+    text-shadow: 0 0 8px #ad971a99;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.buttons button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ad971a;
+    background-color: #ad971a; 
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #ad971acc;
+}
+
+.lap {
+    max-height: 180px;
+    overflow-y: auto;
+    border-top: 1px solid #ad971a80;
+    padding-top: 10px;
+}
+
+#laps {
+    list-style: none;
+}
+
+#laps li {
+    padding: 6px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #ad971a4d;
+    color: #f5e6b8;
+}
+
+
+.lap::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lap::-webkit-scrollbar-thumb {
+    background-color: #ad971a;
+    border-radius: 5px;
+}
