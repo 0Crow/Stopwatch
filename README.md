@@ -12,8 +12,13 @@ A simple countdown/timer UI demo for setting and running timers.
 
 ## Run
 
-1. Open `timer.html` in your browser.
-2. Enter duration and press Start.
+- Open `timer.html` in your browser.
+
+## How It Works
+- Click start button to statt.
+- Click pause button to pause.
+- Click reset button to stop and go back from the start.
+- Click lap button to display specific time range duration when press.
 
 ## Files
 
@@ -24,3 +29,4 @@ A simple countdown/timer UI demo for setting and running timers.
 ---
 
 **Notes:** Static demo; no installation required.
+
