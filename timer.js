@@ -8,7 +8,7 @@ let running = false;
 const timerDisplay = document.getElementById("timer");
 const lapsList = document.getElementById("laps");
 
-function updateDisplay() {
+function updateDisplay() { //update the counting.
     let h = hours.toString().padStart(2, '0');
     let m = minutes.toString().padStart(2, '0');
     let s = seconds.toString().padStart(2, '0');
@@ -16,7 +16,7 @@ function updateDisplay() {
     timerDisplay.textContent = `${h}:${m}:${s}:${ms}`;
 }
 
-function startTimer() {
+function startTimer() { //statt the timer.
     if (running) return;
     running = true;
     timer = setInterval(() => {
@@ -37,12 +37,12 @@ function startTimer() {
     }, 10); 
 }
 
-function pauseTimer() {
+function pauseTimer() { //stops the timer for the meantime.
     running = false;
     clearInterval(timer);
 }
 
-function resetTimer() {
+function resetTimer() { //restart the counting.
     running = false;
     clearInterval(timer);
     hours = 0;
@@ -53,7 +53,7 @@ function resetTimer() {
     lapsList.innerHTML = "";
 }
 
-function lapTimer() {
+function lapTimer() { //display lap duration range.
     const lapTime = timerDisplay.textContent;
     const li = document.createElement("li");
     li.textContent = lapTime;
@@ -61,3 +61,4 @@ function lapTimer() {
 }
 
 updateDisplay();
+
